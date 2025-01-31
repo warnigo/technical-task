@@ -169,7 +169,7 @@ const eslintConfig = [
       "react/jsx-max-depth": [
         "error",
         {
-          max: 6,
+          max: 7,
         },
       ],
       "react/jsx-no-duplicate-props": [

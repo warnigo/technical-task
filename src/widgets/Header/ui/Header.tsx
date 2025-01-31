@@ -3,13 +3,14 @@
 import { type FC, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
-import { usePathname, useRouter } from "@/shared/i18n"
+import { ROUTES } from "@/shared/config"
+import { Link, usePathname, useRouter } from "@/shared/i18n"
 import { cn } from "@/shared/lib"
 import { MotionButton } from "@/shared/motion-ui"
-import { DropdownMenu, Logo, Separator } from "@/shared/ui"
+import { Avatar, Dropdown, DropdownMenu, Logo, Separator } from "@/shared/ui"
 
 import { motion } from "framer-motion"
-import { AlignJustify, ChevronLeft, Languages } from "lucide-react"
+import { AlignJustify, ChevronLeft, CircleUser, Languages } from "lucide-react"
 
 import { buttonHoverVariants, headerVariants } from "../lib/motion"
 import { languages } from "../model/constants"
@@ -46,23 +47,51 @@ const Header: FC = () => {
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Logo className="flex min-h-10 items-center justify-center text-2xl" />
 
-        <div className="flex items-center space-x-4">
-          <motion.div
+        <div className="flex items-center gap-4">
+          <DropdownMenu
+            align="right"
             className="hidden md:flex"
-            variants={buttonHoverVariants}
-            whileHover="hover"
-            whileTap="tap"
+            items={languageItems}
           >
-            <DropdownMenu align="right" items={languageItems}>
-              <MotionButton
-                className="h-full min-h-10 rounded-xl font-mono text-sm"
-                hoverIcon={<Languages />}
-                variant="outline"
+            <MotionButton
+              className="h-full min-h-10 rounded-xl font-mono text-sm"
+              hoverIcon={<Languages />}
+              variant="outline"
+            >
+              {languages.find((l) => l.code === locale)?.name}
+            </MotionButton>
+          </DropdownMenu>
+
+          <Dropdown
+            align="right"
+            className="hidden md:flex"
+            trigger={<Avatar alt="salom" fallback="P" src="/avatar.webp" />}
+          >
+            <div className="flex flex-col items-center justify-start">
+              <div className="flex shrink-0 items-center justify-start gap-2">
+                <Avatar alt="salom" fallback="P" src="/avatar.webp" />
+
+                <div>
+                  <h6 className="font-mono font-bold">Abubakir Shavkatov</h6>
+
+                  <p className="font-mono text-xs font-bold text-highlight">
+                    {t("Common.stack")}
+                  </p>
+                </div>
+              </div>
+
+              <Separator />
+
+              <Link
+                className="flex w-full items-center justify-start gap-2 rounded-lg p-2 font-mono text-sm font-bold hover:bg-secondary"
+                href={ROUTES.profile}
               >
-                {languages.find((l) => l.code === locale)?.name}
-              </MotionButton>
-            </DropdownMenu>
-          </motion.div>
+                <CircleUser className="size-5" />
+
+                <span>{t("Layout.profile")}</span>
+              </Link>
+            </div>
+          </Dropdown>
 
           <MotionButton
             aria-label={t("Layout.openMenu")}
@@ -78,36 +107,45 @@ const Header: FC = () => {
       </div>
 
       <Sheet isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
-        <div className="flex h-full flex-col justify-between">
-          <div className="flex flex-col gap-3">
+        <div className="flex h-[calc(100vh-44px)] flex-col gap-3 overflow-hidden">
+          <div className="grid gap-4">
             <Logo className="flex min-h-10 items-start justify-center border-b border-border pb-3 text-2xl" />
 
-            <Separator />
+            <nav>
+              <Link
+                className="flex w-full items-center justify-start gap-2 rounded-lg p-2 font-mono text-base font-bold hover:bg-secondary"
+                href={ROUTES.profile}
+              >
+                <CircleUser className="size-6 md:size-5" />
 
-            <div className="flex w-full items-center justify-between gap-3">
-              {languageItems.map(({ label, onClick, active }) => (
-                <motion.div
-                  key={label}
-                  className="w-full"
-                  variants={buttonHoverVariants}
-                  whileHover="hover"
-                  whileTap="tap"
+                <span>{t("Layout.profile")}</span>
+              </Link>
+            </nav>
+          </div>
+
+          <div className="mt-auto flex w-full items-center justify-between gap-3 border-t border-border pt-4">
+            {languageItems.map(({ label, onClick, active }) => (
+              <motion.div
+                key={label}
+                className="w-full"
+                variants={buttonHoverVariants}
+                whileHover="hover"
+                whileTap="tap"
+              >
+                <MotionButton
+                  aria-label={label}
+                  hoverIcon={<Languages />}
+                  variant="outline"
+                  className={cn(
+                    "size-full min-h-10 rounded-xl font-mono text-sm",
+                    { "bg-accent": active },
+                  )}
+                  onClick={onClick}
                 >
-                  <MotionButton
-                    aria-label={label}
-                    hoverIcon={<Languages />}
-                    variant="outline"
-                    className={cn(
-                      "size-full min-h-10 rounded-xl font-mono text-sm",
-                      { "bg-accent": active },
-                    )}
-                    onClick={onClick}
-                  >
-                    {label}
-                  </MotionButton>
-                </motion.div>
-              ))}
-            </div>
+                  {label}
+                </MotionButton>
+              </motion.div>
+            ))}
           </div>
         </div>
       </Sheet>

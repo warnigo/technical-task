@@ -6,7 +6,7 @@ import { cn } from "@/shared/lib"
 
 import { AnimatePresence, motion } from "framer-motion"
 
-type DropdownItemType = {
+export type DropdownItemType = {
   label: string
   onClick?: () => void
   icon?: React.ReactNode
