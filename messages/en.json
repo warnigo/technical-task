@@ -1,0 +1,42 @@
+{
+  "Common": {
+    "me": "Abubakir Shavkatov",
+    "warnigo": "Warnigo",
+    "download": "Download",
+    "visitBlog": "Visit My Blog Site",
+    "go": "Go",
+    "thanksForVisit": "Thanks for visiting!",
+    "contactMe": "Contact Me",
+    "aboutMe": "About Me",
+    "close": "Close",
+    "socialMedia": "Social Media"
+  },
+  "Layout": {
+    "home": "Home",
+    "experience": "Experience",
+    "contact": "Contact",
+    "resume": "My Resume",
+    "notFoundPage": "Not Found page",
+    "header": "Header",
+    "footer": "Footer",
+    "availableWork": "Available For Work",
+    "notAvailableWork": "Not Available For Work",
+    "localeTime": "Local Time",
+    "sourceCode": "Source Code",
+    "openMenu": "Open Menu"
+  },
+  "BetaBanner": {
+    "title": "This site is currently in beta. Features may not be fully available.",
+    "close": "Close banner"
+  },
+  "Introduction": {
+    "hello": "Hello I'm",
+    "shortAboutMe": "Half of my life has been spent talking to machines, shaping the digital world through code. I’m passionate about designing robust architectures and solving intricate problems, from scaling systems to building powerful algorithms. I love taking on complex projects that push boundaries, creating seamless solutions that evolve and adapt.",
+    "occupation": "Frontend Engineer - Software Engineer",
+    "sectionAriaLabel": "Intro section",
+    "profileImageAlt": "My Photo"
+  },
+  "Resume": {
+    "resumeDownload": "Resume Download"
+  }
+}

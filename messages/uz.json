@@ -1,0 +1,42 @@
+{
+  "Common": {
+    "me": "Abubakir Shavkatov",
+    "warnigo": "Warnigo",
+    "download": "Yuklab olish",
+    "visitBlog": "Mening blogimga tashrif buyuring",
+    "go": "O‘tish",
+    "thanksForVisit": "Tashrifingiz uchun rahmat!",
+    "contactMe": "Men bilan bog‘laning",
+    "aboutMe": "Men haqimda",
+    "close": "Yopish",
+    "socialMedia": "Ijtimoiy tarmoqlar"
+  },
+  "Layout": {
+    "home": "Bosh sahifa",
+    "experience": "Tajriba",
+    "contact": "Aloqa",
+    "resume": "Mening rezyumem",
+    "notFoundPage": "Sahifa topilmadi",
+    "header": "Sarlavha",
+    "footer": "Pastki qism",
+    "availableWork": "Ishga tayyorman",
+    "notAvailableWork": "Ishga tayyor emasman",
+    "localeTime": "Mahalliy vaqt",
+    "sourceCode": "Manba kodi",
+    "openMenu": "Menyuni ochish"
+  },
+  "BetaBanner": {
+    "title": "Sayt hozir beta-versiyada. Barcha imkoniyatlar to‘liq ishlamasligi mumkin.",
+    "close": "Bannerni yopish"
+  },
+  "Introduction": {
+    "hello": "Salom, men",
+    "shortAboutMe": "Hayotimning yarmi kod orqali raqamli dunyoni shakllantirishga sarflandi. Men mustahkam arxitekturalarni loyihalash va murakkab muammolarni hal qilishga ishtiyoqmandman, tizimlarni kengaytirishdan tortib kuchli algoritmlarni yaratishgacha. Men chegaralarni kengaytiradigan murakkab loyihalarni yaxshi ko‘raman.",
+    "occupation": "Frontend Engineer - Software Engineer",
+    "sectionAriaLabel": "Kirish bo‘limi",
+    "profileImageAlt": "Mening fotosuratim"
+  },
+  "Resume": {
+    "resumeDownload": "Rezyumeni yuklab olish"
+  }
+}
