@@ -3,9 +3,7 @@
 import { type FC, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
-import { LocalTime } from "@/entities/LocalTime"
-import { menuItems } from "@/shared/config"
-import { Link, usePathname, useRouter } from "@/shared/i18n"
+import { usePathname, useRouter } from "@/shared/i18n"
 import { cn } from "@/shared/lib"
 import { MotionButton } from "@/shared/motion-ui"
 import { DropdownMenu, Logo, Separator } from "@/shared/ui"
@@ -13,11 +11,7 @@ import { DropdownMenu, Logo, Separator } from "@/shared/ui"
 import { motion } from "framer-motion"
 import { AlignJustify, ChevronLeft, Languages } from "lucide-react"
 
-import {
-  buttonHoverVariants,
-  headerVariants,
-  linkHoverVariants,
-} from "../lib/motion"
+import { buttonHoverVariants, headerVariants } from "../lib/motion"
 import { languages } from "../model/constants"
 
 import { Sheet } from "./Sheet"
@@ -52,27 +46,7 @@ const Header: FC = () => {
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Logo className="flex min-h-10 items-center justify-center text-2xl" />
 
-        <nav className="hidden md:block">
-          <ul className="flex items-center space-x-6">
-            {menuItems.map(({ label, href }) => (
-              <li key={label} aria-label={t(`Layout.${label}`)}>
-                <Link
-                  href={href}
-                  className={cn(
-                    "font-mono text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-primary",
-                    { "text-primary": pathname === href },
-                  )}
-                >
-                  {t(`Layout.${label}`)}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
         <div className="flex items-center space-x-4">
-          <LocalTime className="hidden lg:flex" />
-
           <motion.div
             className="hidden md:flex"
             variants={buttonHoverVariants}
@@ -108,30 +82,6 @@ const Header: FC = () => {
           <div className="flex flex-col gap-3">
             <Logo className="flex min-h-10 items-start justify-center border-b border-border pb-3 text-2xl" />
 
-            <nav className="grow">
-              <ul className="space-y-4">
-                {menuItems.map(({ label, href }) => (
-                  <motion.li
-                    key={label}
-                    variants={linkHoverVariants}
-                    whileHover="hover"
-                  >
-                    <Link
-                      aria-label={t(`Layout.${label}`)}
-                      href={href}
-                      className={cn(
-                        "block font-mono text-lg font-medium text-muted-foreground transition-colors duration-300 hover:text-primary",
-                        { "text-primary": pathname === href },
-                      )}
-                      onClick={() => setIsSheetOpen(false)}
-                    >
-                      {t(`Layout.${label}`)}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </nav>
-
             <Separator />
 
             <div className="flex w-full items-center justify-between gap-3">
@@ -158,10 +108,6 @@ const Header: FC = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
-
-          <div className="mb-6 flex items-center justify-end border-t border-border">
-            <LocalTime className="flex items-center pt-3" />
           </div>
         </div>
       </Sheet>

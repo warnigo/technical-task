@@ -1,42 +1,25 @@
 {
   "Common": {
-    "me": "Abubakir Shavkatov",
+    "brand": "ASH's task",
     "warnigo": "Warnigo",
-    "download": "Download",
-    "visitBlog": "Visit My Blog Site",
     "go": "Go",
     "thanksForVisit": "Thanks for visiting!",
-    "contactMe": "Contact Me",
-    "aboutMe": "About Me",
-    "close": "Close",
-    "socialMedia": "Social Media"
+    "close": "Close"
   },
   "Layout": {
     "home": "Home",
-    "experience": "Experience",
-    "contact": "Contact",
-    "resume": "My Resume",
     "notFoundPage": "Not Found page",
     "header": "Header",
     "footer": "Footer",
-    "availableWork": "Available For Work",
-    "notAvailableWork": "Not Available For Work",
     "localeTime": "Local Time",
     "sourceCode": "Source Code",
     "openMenu": "Open Menu"
   },
-  "BetaBanner": {
-    "title": "This site is currently in beta. Features may not be fully available.",
-    "close": "Close banner"
-  },
-  "Introduction": {
-    "hello": "Hello I'm",
-    "shortAboutMe": "Half of my life has been spent talking to machines, shaping the digital world through code. I’m passionate about designing robust architectures and solving intricate problems, from scaling systems to building powerful algorithms. I love taking on complex projects that push boundaries, creating seamless solutions that evolve and adapt.",
-    "occupation": "Frontend Engineer - Software Engineer",
-    "sectionAriaLabel": "Intro section",
-    "profileImageAlt": "My Photo"
-  },
-  "Resume": {
-    "resumeDownload": "Resume Download"
+  "Home": {
+    "sectionAriaLabel": "Welcome Section",
+    "heading": "Challenge Accepted! Thanks for Reviewing!",
+    "description": "This task was quite interesting—it focused on a profile user interface with structured layers. The project follows a modular approach using FSD and leverages next-intl for seamless localization. Styling is handled with Tailwind CSS, and all components are custom-built for flexibility.",
+    "taskStack": "Task stacks",
+    "goToProfile": "Go To Profile"
   }
 }

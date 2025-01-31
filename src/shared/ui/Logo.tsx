@@ -15,14 +15,14 @@ export const Logo: FC<Props> = ({ className, title }) => {
 
   return (
     <Link
-      aria-label={t("me")}
+      aria-label={t("brand")}
       href={ROUTES.home}
       className={cn(
         "min-h-10 font-mono text-2xl font-black transition-colors hover:text-primary",
         className,
       )}
     >
-      {title ? title : t("me")}
+      {title ? title : t("brand")}
     </Link>
   )
 }

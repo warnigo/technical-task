@@ -16,4 +16,5 @@ const LocaleLayout: FC<Props> = async ({ children, params }) => {
     </NextIntlProvider>
   )
 }
+
 export default LocaleLayout
