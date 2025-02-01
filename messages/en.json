@@ -23,5 +23,14 @@
     "description": "This task was quite interesting—it focused on a profile user interface with structured layers. The project follows a modular approach using FSD and leverages next-intl for seamless localization. Styling is handled with Tailwind CSS, and all components are custom-built for flexibility.",
     "taskStack": "Task stacks",
     "goToProfile": "Go To Profile"
+  },
+  "Profile": {
+    "profile": "Profile",
+    "editProfile": "Edit Profile",
+    "name": "Name",
+    "username": "Username",
+    "bio": "Bio",
+    "email": "Email",
+    "phoneNumber": "Phone Number"
   }
 }

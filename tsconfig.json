@@ -37,7 +37,8 @@
     ".next/types/**/*.ts",
     "eslint.config.mjs",
     "postcss.config.mjs",
-    "scripts/reactor.mjs"
+    "scripts/reactor.mjs",
+    "public/mockServiceWorker.js"
   ],
   "exclude": ["node_modules", ".next"]
 }
