@@ -50,7 +50,7 @@ const Header: FC = () => {
         <div className="flex items-center gap-4">
           <DropdownMenu
             align="right"
-            className="hidden md:flex"
+            className="hidden md:block"
             items={languageItems}
           >
             <MotionButton
@@ -64,12 +64,12 @@ const Header: FC = () => {
 
           <Dropdown
             align="right"
-            className="hidden md:flex"
+            className="hidden md:block"
             trigger={<Avatar alt="salom" fallback="P" src="/avatar.webp" />}
           >
             <div className="flex flex-col items-center justify-start">
               <div className="flex shrink-0 items-center justify-start gap-2">
-                <Avatar alt="salom" fallback="P" src="/avatar.webp" />
+                <Avatar alt="me photo" fallback="P" src="/avatar.webp" />
 
                 <div>
                   <h6 className="font-mono font-bold">Abubakir Shavkatov</h6>

@@ -1,6 +1,7 @@
 import { type Metadata, type Viewport } from "next"
 
-export const metadata: Metadata = {
+export const metadata = {
+  metadataBase: new URL("https://warnigo.uz"),
   title: {
     template: "%s | Abubakir Shavkatov",
     default: "Abubakir Shavkatov's task",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "",
+    url: "https://warnigo.uz",
     title: "Abubakir Shavkatov | Software Engineer & Web Developer",
     description: "",
     images: [
@@ -50,16 +51,16 @@ export const metadata: Metadata = {
     description:
       "Software engineer and creative developer combining technical expertise with artistic vision. Follow my journey in tech and digital creativity.",
     creator: "@warn1go",
-    images: ["/avatar.webp"],
+    images: ["https://warnigo.uz/avatar.webp"],
   },
   verification: {
     google: "",
     yandex: "",
   },
-}
+} satisfies Metadata
 
-export const viewport: Viewport = {
+export const viewport = {
   initialScale: 1,
   userScalable: false,
   width: "device-width",
-}
+} satisfies Viewport

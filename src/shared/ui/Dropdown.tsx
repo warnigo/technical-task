@@ -70,7 +70,7 @@ export const Dropdown: FC<DropdownProps> = ({
             initial={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
             className={cn(
-              "absolute z-50 mt-1.5 min-w-60 rounded-lg border border-border bg-background p-2 shadow-lg",
+              "absolute z-50 mt-1 min-w-60 rounded-lg border border-border bg-background p-2 shadow-lg",
               align === "left" && "left-0",
               align === "right" && "right-0",
               align === "center" && "left-1/2 -translate-x-1/2",
