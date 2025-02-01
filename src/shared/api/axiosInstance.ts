@@ -25,10 +25,7 @@ class ApiClient {
 
     // Request Interceptor
     this.instance.interceptors.request.use(
-      (config) => {
-        console.log(`Request to: ${config.url}`)
-        return config
-      },
+      (config) => config,
       // eslint-disable-next-line promise/no-promise-in-callback
       (error) => Promise.reject(error),
     )
@@ -108,7 +105,6 @@ class ApiClient {
     try {
       const response: AxiosResponse<T> = await this.instance.request<T>(config)
       return response.data
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       throw new Error(error.response?.data?.message || error.message)
     }

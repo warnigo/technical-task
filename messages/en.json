@@ -5,7 +5,10 @@
     "stack": "Frontend Engineer",
     "go": "Go",
     "thanksForVisit": "Thanks for visiting!",
-    "close": "Close"
+    "close": "Close",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "save": "Save"
   },
   "Layout": {
     "home": "Home",
@@ -29,7 +32,7 @@
     "editProfile": "Edit Profile",
     "name": "Name",
     "username": "Username",
-    "bio": "Bio",
+    "bio": "Bio (option)",
     "email": "Email",
     "phoneNumber": "Phone Number"
   }

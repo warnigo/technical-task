@@ -12,17 +12,17 @@ import {
   Separator,
 } from "@/shared/ui"
 
-import { MotionButton } from "@shared/motion-ui"
+import { EditProfileModal } from "@entities/EditProfileModal"
 import { motion } from "framer-motion"
-import { Edit } from "lucide-react"
 
-import { useGetProfile } from "../api/useProfile"
+import { useGetProfile, usePutProfile } from "../api/useProfile"
 
 import { ProfileField } from "./ProfileField"
 import { ProfileSkeleton } from "./ProfileSkeleton"
 
 const Profile: FC = () => {
-  const { data: profile, isLoading, error } = useGetProfile()
+  const { data: profile, isLoading, error, refetch } = useGetProfile()
+  const { mutateAsync } = usePutProfile()
   const t = useTranslations("Profile")
 
   if (isLoading) return <ProfileSkeleton />
@@ -47,9 +47,13 @@ const Profile: FC = () => {
             {t("profile")}
           </CardTitle>
 
-          <MotionButton hoverIcon={<Edit />} size="lg" variant="outline">
-            {t("editProfile")}
-          </MotionButton>
+          <EditProfileModal
+            defaultValues={profile}
+            refetch={refetch}
+            onSubmit={async (values) => {
+              await mutateAsync(values)
+            }}
+          />
         </CardHeader>
 
         <CardContent>

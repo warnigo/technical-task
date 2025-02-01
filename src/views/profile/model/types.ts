@@ -6,3 +6,11 @@ export type ProfileType = {
   bio: string
   image: string
 }
+
+export type ProfileMutationType = Promise<{
+  name: string
+  email: string
+  username: string
+  phone?: string | undefined
+  bio?: string | undefined
+}>

@@ -11,4 +11,11 @@ export const profileHandlers = [
       image: "/avatar.webp",
     }),
   ),
+  http.put("/api/profile", async ({ request }) => {
+    const data = await request.json()
+    return HttpResponse.json(
+      { message: "Profile updated successfully", profile: data },
+      { status: 200 },
+    )
+  }),
 ]

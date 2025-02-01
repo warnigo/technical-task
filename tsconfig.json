@@ -24,10 +24,8 @@
       "@app/*": ["./src/app/*"],
       "@views/*": ["./src/views/*"],
       "@shared/*": ["./src/shared/*"],
-      "@helpers/*": ["./src/helpers/*"],
-      "@features/*": ["./src/features/*"],
-      "@widgets/*": ["./src/widgets/*"],
-      "~images/*": ["./public/images/*"]
+      "@entities/*": ["./src/entities/*"],
+      "@widgets/*": ["./src/widgets/*"]
     }
   },
   "include": [

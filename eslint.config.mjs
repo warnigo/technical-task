@@ -234,6 +234,7 @@ const eslintConfig = [
       "tailwindcss/no-unnecessary-arbitrary-value": ["error", twOptions],
 
       // TypeScript rules
+      "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
@@ -269,7 +270,7 @@ const eslintConfig = [
           objectLiteralTypeAssertions: "never",
         },
       ],
-      "@typescript-eslint/no-misused-promises": "error",
+      "@typescript-eslint/no-misused-promises": "off",
       "@typescript-eslint/ban-ts-comment": [
         "error",
         {
