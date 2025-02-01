@@ -1,42 +1,39 @@
 {
   "Common": {
-    "me": "Abubakir Shavkatov",
+    "brand": "ASH'ning vazifasi",
     "warnigo": "Warnigo",
-    "download": "Yuklab olish",
-    "visitBlog": "Mening blogimga tashrif buyuring",
-    "go": "O‘tish",
+    "stack": "Frontend Engineer",
+    "go": "Boshqa sahifaga o‘tish",
     "thanksForVisit": "Tashrifingiz uchun rahmat!",
-    "contactMe": "Men bilan bog‘laning",
-    "aboutMe": "Men haqimda",
     "close": "Yopish",
-    "socialMedia": "Ijtimoiy tarmoqlar"
+    "cancel": "Bekor qilish",
+    "saving": "Saqlanmoqda...",
+    "save": "Saqlash"
   },
   "Layout": {
     "home": "Bosh sahifa",
-    "experience": "Tajriba",
-    "contact": "Aloqa",
-    "resume": "Mening rezyumem",
-    "notFoundPage": "Sahifa topilmadi",
-    "header": "Sarlavha",
-    "footer": "Pastki qism",
-    "availableWork": "Ishga tayyorman",
-    "notAvailableWork": "Ishga tayyor emasman",
+    "profile": "Profil",
+    "notFoundPage": "Topilmadi sahifa",
+    "header": "Boshqaruv paneli",
+    "footer": "Foydalanuvchi paneli",
     "localeTime": "Mahalliy vaqt",
     "sourceCode": "Manba kodi",
-    "openMenu": "Menyuni ochish"
+    "openMenu": "Menuni ochish"
   },
-  "BetaBanner": {
-    "title": "Sayt hozir beta-versiyada. Barcha imkoniyatlar to‘liq ishlamasligi mumkin.",
-    "close": "Bannerni yopish"
+  "Home": {
+    "sectionAriaLabel": "Xush kelibsiz bo‘limi",
+    "heading": "Challange Qabul qilindi! Ko‘rib chiqishga rahmat!",
+    "description": "Ushbu vazifa juda qiziqarli edi — foydalanuvchi profilini yaratishda strukturalangan qatlamlarga e’tibor qaratildi. Loyihada modulga asoslangan yondashuv va next-intl yordamida lokalizatsiya qulay ishlaydi. Tailwind CSS yordamida dizayn qilindi va barcha komponentlar moslashuvchanlik uchun maxsus yaratilgan.",
+    "taskStack": "Vazifa steklari",
+    "goToProfile": "Profilga o‘tish"
   },
-  "Introduction": {
-    "hello": "Salom, men",
-    "shortAboutMe": "Hayotimning yarmi kod orqali raqamli dunyoni shakllantirishga sarflandi. Men mustahkam arxitekturalarni loyihalash va murakkab muammolarni hal qilishga ishtiyoqmandman, tizimlarni kengaytirishdan tortib kuchli algoritmlarni yaratishgacha. Men chegaralarni kengaytiradigan murakkab loyihalarni yaxshi ko‘raman.",
-    "occupation": "Frontend Engineer - Software Engineer",
-    "sectionAriaLabel": "Kirish bo‘limi",
-    "profileImageAlt": "Mening fotosuratim"
-  },
-  "Resume": {
-    "resumeDownload": "Rezyumeni yuklab olish"
+  "Profile": {
+    "profile": "Profil",
+    "editProfile": "Profilni tahrirlash",
+    "name": "Ism",
+    "username": "Foydalanuvchi nomi",
+    "bio": "Biyografiya (ixtiyoriy)",
+    "email": "Elektron pochta",
+    "phoneNumber": "Telefon raqami"
   }
 }

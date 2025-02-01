@@ -3,7 +3,7 @@ import { type Metadata } from "next"
 
 import { Home, homePageMetadata } from "@views/home"
 
-export const metadata: Metadata = homePageMetadata
+export const metadata = homePageMetadata satisfies Metadata
 
 const HomePage: FC = () => <Home />
 
